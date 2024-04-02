@@ -1,0 +1,22 @@
+At time 5 node1, Introducing channel error with code 0010 and message = dup
+At time 5.5 Sender node1 Sent Frame with Seq_Num = 0 And Payload = #dup# and trailer = 01100001 and Modified 0 ,Lost No ,Duplicate 1 ,Delay 0
+At time 5.5 node1, Introducing channel error with code 0011 and message = dupdelay
+At time 6 Sender node1 Sent Frame with Seq_Num = 1 And Payload = #dupdelay# and trailer = 00010100 and Modified 0 ,Lost No ,Duplicate 1 ,Delay 1
+At time 6 node1, Introducing channel error with code 0000 and message = cc
+At time 6.5 Sender node1 Sent Frame with Seq_Num = 2 And Payload = #cc# and trailer = 00000000 and Modified 0 ,Lost No ,Duplicate 0 ,Delay 0
+At time 6.5 Receiver node0 Received Frame with Seq_Num = 0 And Payload = #dup# and trailer = 01100001
+At time 7 Receiver node0 Sent ACK with number 0
+At time 6.6 Receiver node0 Received Frame with Seq_Num = 0 And Payload = #dup# and trailer = 01100001
+At time 7.5 Receiver node0 Received Frame with Seq_Num = 2 And Payload = #cc# and trailer = 00000000
+At time 8 Receiver node0 Sent NACK with number 1
+At time 8 Sender node1 Received  = ACK with number 0
+At time 9 Sender node1 Received  = NACK with number 1
+At time 9.5 Sender node1 Sent Frame with Seq_Num = 1 And Payload = #dupdelay# and trailer = 00010100
+At time 10.5 Receiver node0 Received Frame with Seq_Num = 1 And Payload = #dupdelay# and trailer = 00010100
+At time 11 Receiver node0 Sent ACK with number 1
+At time 11.5 Receiver node0 Sent ACK with number 2
+At time 11 Receiver node0 Received Frame with Seq_Num = 1 And Payload = #dupdelay# and trailer = 00010100
+At time 11.1 Receiver node0 Received Frame with Seq_Num = 1 And Payload = #dupdelay# and trailer = 00010100
+At time 12 Sender node1 Received  = ACK with number 1
+At time 12.5 Sender node1 Received  = ACK with number 2
+At time 12.5 End of Simulation 
